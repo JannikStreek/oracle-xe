@@ -19,7 +19,7 @@
 
 # Put the Oracle XE RPM somewhere and list its URL in this attribute. Typically you'll want
 # to do this from within a role
-default['oracle-xe']['url'] = '/mnt/share'
+default['oracle-xe']['url'] = '0.0.0.0:3000'
 
 default['oracle-xe']['http-port'] = 8079
 default['oracle-xe']['tnslsnr-port'] = 1521
