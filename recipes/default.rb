@@ -27,10 +27,9 @@ end
 package 'bc'
 package 'libaio'
 
-yum_package 'oracle-xe' do
+rpm_package 'oracle-xe' do
   source File.join(Chef::Config[:file_cache_path], 'oracle-xe-11.2.0-1.0.x86_64.rpm')
-  ignore_failure true
-  retries 1
+  options 'ivh'
   action :install
 end
 
